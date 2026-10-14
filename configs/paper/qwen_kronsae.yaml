@@ -1,0 +1,42 @@
+model_name: Qwen/Qwen2.5-1.5B
+layer: 12
+hook_point: resid_post
+
+sae_type: kronsae
+dict_size: 16384
+num_heads: 1024
+num_mkeys: 4
+num_nkeys: 4
+cartesian_op: mul
+router_depth: 2
+topk: 32
+start_topk: 32
+topk_warmup_steps_fraction: 0.0
+topk_aux: 512
+aux_penalty: 0.03125
+input_unit_norm: true
+n_batches_to_dead: 10
+
+lr: 0.0008
+weight_decay: 0.0
+num_tokens: 250000000
+seq_len: 1024
+model_batch_size: 16
+num_batches_in_buffer: 5
+batch_size: 8192
+max_grad_norm: 1.0
+warmup_fraction: 0.1
+scheduler_type: cosine_with_min_lr
+
+device: cuda
+dataset_path: HuggingFaceFW/fineweb-edu
+seed: 42
+
+enable_comet: false
+comet_project: kronsae-public
+comet_run_suffix: qwen_layer12_f16384_l0_32_h1024_m4_n4
+sae_name: kronsae-qwen-layer12
+performance_log_steps: 100
+save_checkpoint_steps: 1000000
+eval_num_batches: 150
+output_dir: outputs/qwen_kronsae

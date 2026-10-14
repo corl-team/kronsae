@@ -1,0 +1,12 @@
+.history
+.vscode
+.idea
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+/outputs/
+checkpoints/
+/checkpoints_*/

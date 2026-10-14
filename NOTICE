@@ -1,0 +1,8 @@
+KronSAE
+Copyright 2026 T-Tech
+
+This project includes code in activation_store.py, eval.py, logs.py, and
+sae/model.py originally distributed under the MIT License:
+Copyright (c) 2025 bartbussmann.
+
+The original copyright and license notices are retained in those source files.
